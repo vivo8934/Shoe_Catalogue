@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Shoe_Catalogue</title>
+  <link rel="stylesheet" href="Shoe_Catalogue.css">
+  <!-- <script src="handlebars.js/4.0.6/handlebars.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+  <script src="Catalogue.json" class = 'data'></script>
+</head>
+
+<body>
+  <script class="Template" type="text/handlebars-x">
+{{#each shoes}}
+<ul>
+<li>color: {{color}}</li>
+<li>price:R {{price}}.00</li>
+<li>in_stock: {{in_stock}}</li>
+<li>size: {{size}} </li>
+</ul>
+{{/each}}
+  </script>
+
+  <div class="container">
+    <div class="logo">
+      <h1>Shoe Catalogue</h1>
+    </div>
+    <div class="Main-slider" id = "big-slide">
+<div class="slide-onGo">
+  <img
+  src="/home/bootcamp/projects/Shoe_Catalogue/sneaker3.jpg" alt="first" class="slide"/>
+  <img
+  src="/home/bootcamp/projects/Shoe_Catalogue/sneaker2.jpg" alt="second" class="slide" />
+  <img
+   src="/home/bootcamp/projects/Shoe_Catalogue/sneaker.jpg" alt="third" class="slide" />
+</div>
+        </div>
+    </div>
+    <br>
+    <br>
+  <form class= "User">
+    <label>Color</label> : <select class= "option" size="1">
+   <option value="selector color" class="color" disabled selected>Select color</option>
+      <option value="all" class="color">all</option>
+      <option value="black" class="color">black</option>
+      <option value="brown" class="color">brown</option>
+      <option value="red" class="color">red</option>
+    </select>
+    <label>Size</label>  : <select class= "DSize" size="1">
+      <option value="selector size" class="size" disabled selected>Select size</option>
+      <option value="all" class="size">all</option>
+      <option value="4" class="size">4</option>
+      <option value="5" class="size">5</option>
+      <option value="6" class="size">6</option>
+      <option value="7" class="size">7</option>
+      <option value="8" class="size">8</option>
+    </select><br><br>
+    <button type="button" name="search" class ='myBtn'>Search</button>
+  </form>
+  <div class="myshoes">
+
+  </div>
+<script src="Shoe_Catalogue.js" charset="utf-8"></script>
+</body>
+
+</html>

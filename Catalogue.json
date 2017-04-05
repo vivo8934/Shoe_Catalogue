@@ -1,0 +1,22 @@
+var shoes = [
+
+
+        {
+            color : 'blue',
+            price : 950,
+            in_stock : 5,
+            size: 7
+        },
+        {
+            color : 'black',
+            price : 1075,
+            in_stock : 3,
+            size: 7
+        },
+        {
+            color : 'red',
+            price : 875,
+            in_stock : 3,
+            size: 7
+        },
+];
