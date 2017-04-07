@@ -52,17 +52,27 @@
 })();
 
 var MyTemp = document.querySelector('.Template');
-var TempInstance = Handlebars.compile(MyTemp.innerHTML);
 var search = document.querySelector('.myBtn');
-var shoesL = [];
+var color = document.querySelector('.color');
+var size = document.querySelector('.DSize');
+var Mycolor = document.querySelector('.myColor');
 
+var TempInstance = Handlebars.compile(MyTemp.innerHTML);
 var myshoes=document.querySelector(".myshoes")
-search.addEventListener('click',  function(){
 
-for (var i = 0; i < shoes.length; i++) {
-var sh = shoes[i];
-shoesL.push(sh);
-myshoes.innerHTML = TempInstance({shoes: shoesL})
-}
+search.addEventListener('click',  function(){
+  var colorChoosed = Mycolor.value;
+  var sizeChoosed = size.value;
+  var shoesL = [];
+
+  for (var i = 0; i < shoes.length; i++) {
+    var sh = shoes[i];
+    var colorMatches = (sh.color == colorChoosed || colorChoosed == 'all');
+    var sizeMatches = (sh.size == sizeChoosed || sizeChoosed == 'all');
+    if(colorMatches && sizeMatches){
+      shoesL.push(sh);
+    }
+    myshoes.innerHTML = TempInstance({shoes: shoesL})
+  }
 
 });

@@ -12,14 +12,24 @@
 
 <body>
   <script class="Template" type="text/handlebars-x">
+<table style ='width: 50%'>
+<tr>
+<th colspan = '4'> Stock Available</th>
+  <tr>
+  <th>color</th>
+  <th>price</th>
+  <th>in_stock</th>
+  <th>size</th>
+  </tr>
 {{#each shoes}}
-<ul>
-<li>color: {{color}}</li>
-<li>price:R {{price}}.00</li>
-<li>in_stock: {{in_stock}}</li>
-<li>size: {{size}} </li>
-</ul>
+<tr>
+<td>{{color}}</td>
+<td>R {{price}}.00</td>
+<td>{{in_stock}}</td>
+<td>{{size}}</td>
+</tr>
 {{/each}}
+</table>
   </script>
 
   <div class="container">
@@ -40,11 +50,11 @@
     <br>
     <br>
   <form class= "User">
-    <label>Color</label> : <select class= "option" size="1">
+    <label>Color</label> : <select class= "myColor" size="1">
    <option value="selector color" class="color" disabled selected>Select color</option>
       <option value="all" class="color">all</option>
       <option value="black" class="color">black</option>
-      <option value="brown" class="color">brown</option>
+      <option value="blue" class="color">blue</option>
       <option value="red" class="color">red</option>
     </select>
     <label>Size</label>  : <select class= "DSize" size="1">
@@ -57,11 +67,15 @@
       <option value="8" class="size">8</option>
     </select><br><br>
     <button type="button" name="search" class ='myBtn'>Search</button>
+    <br><br>
   </form>
   <div class="myshoes">
 
   </div>
 <script src="Shoe_Catalogue.js" charset="utf-8"></script>
+<br><br><br>
+<footer>
+Developed by Mfundo ngqanekana codeX 2017</footer>
 </body>
 
 </html>

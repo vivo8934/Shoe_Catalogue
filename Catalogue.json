@@ -4,19 +4,80 @@ var shoes = [
         {
             color : 'blue',
             price : 950,
-            in_stock : 5,
-            size: 7
+            in_stock : 11,
+            size: '7'
+        },
+        {
+            color : 'blue',
+            price : 950,
+            in_stock : 15,
+            size: '8'
+        },
+        {
+            color : 'blue',
+            price : 950,
+            in_stock : 9,
+            size: '6'
+        },
+        {
+            color : 'blue',
+            price : 950,
+            in_stock : 2,
+            size: '5'
+        },
+        {
+            color : 'blue',
+            price : 950,
+            in_stock : 15,
+            size: '4'
         },
         {
             color : 'black',
             price : 1075,
             in_stock : 3,
-            size: 7
+            size: '7'
+        },
+        {
+            color : 'black',
+            price : 1075,
+            in_stock : 3,
+            size: '8'
+        },
+        {
+            color : 'black',
+            price : 1075,
+            in_stock : 3,
+            size: '5'
+        },
+        {
+            color : 'black',
+            price : 1075,
+            in_stock : 3,
+            size: '4'
+        },
+        {
+            color : 'red',
+            price : 875,
+            in_stock : 9,
+            size: '8'
+        },
+        {
+            color : 'red',
+            price : 875,
+            in_stock : 2,
+            size: '6'
         },
         {
             color : 'red',
             price : 875,
             in_stock : 3,
-            size: 7
+            size: '5'
+        },
+        {
+            color : 'red',
+            price : 875,
+            in_stock : 10,
+            size: '4'
+
         },
 ];
