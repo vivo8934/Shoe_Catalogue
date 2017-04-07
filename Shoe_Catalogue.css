@@ -55,3 +55,8 @@ ul{
 table, th, td{
   border: 1px solid black;
 }
+.Btn{
+    width: 60px;
+  height: 30px;
+  border-radius: 10%;
+}
