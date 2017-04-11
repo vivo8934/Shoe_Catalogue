@@ -60,3 +60,26 @@ table, th, td{
   height: 30px;
   border-radius: 10%;
 }
+#shopC{
+  margin-top: 20px;
+  overflow: scroll;
+  width: 1000px;
+  height: 400px
+}
+#myStock{
+  margin-left: 5%;
+}
+#details{
+  float: left;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-style: inset;
+  background-color: grey;
+  color: white;
+  border-color: 2px solid red;
+}
+img{
+  height: 200px;
+  width: 200px;
+}

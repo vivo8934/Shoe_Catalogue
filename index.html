@@ -12,24 +12,20 @@
 
 <body>
   <script class="Template" type="text/handlebars-x">
-<table style ='width: 50%'>
-<tr>
-<th colspan = '4'> Stock Available</th>
-  <tr>
-  <th>color</th>
-  <th>price</th>
-  <th>in_stock</th>
-  <th>size</th>
-  </tr>
+<div id = "shopC">
 {{#each shoes}}
-<tr>
-<td>{{color}}</td>
-<td>R {{price}}.00</td>
-<td>{{in_stock}}</td>
-<td>{{size}}</td>
-</tr>
+<div id= "myStock">
+<div id= "details">
+<img src = {{image}}><br>
+<b>Color:</b>{{color}}<br>
+<b>Price:</b> R {{price}}.00<br>
+<b>In_stock:</b> {{in_stock}}<br>
+<b>Size:</b> {{size}}<br>
+<b>Brand:</b>{{Brand}}
+</div>
+</div>
 {{/each}}
-</table>
+</div>
   </script>
 
   <div class="container">
@@ -75,8 +71,8 @@
   </div>
 <script src="Shoe_Catalogue.js" charset="utf-8"></script>
 <br><br><br>
-<footer>
-Developed by Mfundo ngqanekana codeX 2017</footer>
+<footer>Developed by Mfundo ngqanekana codeX 2017</footer>
+
 </body>
 
 </html>
