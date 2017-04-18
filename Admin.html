@@ -1,35 +1,63 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Admin_Page</title>
-    <link rel="stylesheet" href="Admin.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
-  </head>
-  <body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Admin_Page</title>
+  <link rel="stylesheet" href="Admin.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+</head>
+
+<body>
   <h2>Admin Login</h2>
 
-<form action="/action_page.php">
-  <div class="imgcontainer">
-    <img src="download.png" alt="Avatar" class="avatar">
+  <form action="/action_page.php">
+    <div class="imgcontainer">
+      <img src="download.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" class="username" required>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" class='pass' required>
+
+      <button type="button" class="btn">Login</button>
+
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <a href="home.html"><button type="button" class="cancelbtn">Cancel</button></a>
+    </div>
+  </form>
+  <div class="inputs">
+    <div class="field">
+      <label>Brand:</label>
+      <input type="text" class="brandName">
+    </div>
+    <div class="field">
+      <label>Size:</label>
+      <input type="number" class="sizeName">
+    </div>
+    <div class="field">
+      <label>Stock:</label>
+      <input type="number" class="stockName">
+    </div>
+    <div class="field">
+      <label>Price:</label>
+      <input type="number" class="PriceName">
+    </div>
+    <div class="field">
+      <label>Color:</label>
+      <input type="text" class="ColorName">
+    </div>
+    <div class="field">
+      <label>Image:</label>
+      <input id="myFileInput" type="file" accept="image/*;capture=camera">
+    </div>
   </div>
-
-  <div class="container">
-    <label><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" class = "name" required>
-
-    <label><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" value = "mfundo8934" required>
-
-    <button type="button" class= "btn">Login</button>
-
-  </div>
-
-  <div class="container" style="background-color:#f1f1f1">
-    <a href="home.html"><button type="button" class="cancelbtn">Cancel</button></a>
-  </div>
-</form>
-
 </body>
 <script src="Admin.js" charset="utf-8"></script>
+
 </html>

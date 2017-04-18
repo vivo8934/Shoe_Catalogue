@@ -71,7 +71,9 @@ search.addEventListener('click',  function(){
     var sizeMatches = (sh.size == sizeChoosed || sizeChoosed == 'all');
     if(colorMatches && sizeMatches){
       shoesL.push(sh);
-
+    }
+    else {
+      alert("Select Color and Size")
     }
     myshoes.innerHTML = TempInstance({shoes: shoesL})
   }

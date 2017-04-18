@@ -1,9 +1,23 @@
-var name = document.querySelector('.name');
-var password = document.getElementsByName('.psw')
-var btn = document.getElementsByName('.btn')
+var username = document.querySelector('.username');
+var password = document.querySelector('.pass')
+var btn = document.querySelector('.btn')
+var input = document.querySelector('.inputs')
 
-btn.addEventListener('click',  function(){
+var loginD = function() {
+  var user = 'vivo8934';
+  var pword = 'mfundo8934';
 
-alert("ola")
+var aUser = username.value;
+var aPass = password.value;
 
-});
+
+if(aUser === user && aPass === pword){
+
+input.style.display = "block";
+}
+else {
+  input.style.display = 'none';
+  alert('Please enter correct password or username')
+}
+}
+btn.addEventListener('click', loginD);
