@@ -2,7 +2,7 @@
     border: 3px solid #f1f1f1;
 }
 
-input[type=text], input[type=password] {
+.login input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -60,16 +60,30 @@ span.psw {
     }
 }
 .inputs {
-  cursor: pointer;
-  outline: none;
-  psition: absolute;
-
-
-  height: 300px;
-  width: 200px;
-
+  cursor: crosshair;
+  height: 450px;
+  width: 450px;
+  border: 2px black solid;
+  margin: auto;
+  padding: auto;
+  background-color: lightgrey;
+  display: none;
 }
 
 .hidden{
   display: none;
+}
+.field input[type = 'text'],
+.field input[type = 'number']{
+  padding: 0.5em;
+  height: 25px;
+  width: 50%
+}
+.field label {
+  display: inline-block;
+  width: 20%;
+  text-align: right;
+  font-weight: bold;
+  padding: 0.5em;
+  margin: 0.5em;
 }

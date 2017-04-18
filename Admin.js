@@ -1,8 +1,8 @@
 var username = document.querySelector('.username');
-var password = document.querySelector('.pass')
-var btn = document.querySelector('.btn')
-var input = document.querySelector('.inputs')
-
+var password = document.querySelector('.pass');
+var btn = document.querySelector('.btn');
+var input = document.querySelector('.inputs');
+var login = document.querySelector('.login');
 
 
 var loginD = function() {
@@ -14,11 +14,12 @@ var aPass = password.value;
 
 
 if(aUser === user && aPass === pword){
+login.style.display = 'none';
 input.style.display = 'block';
-input.innerHTML = input.innerHTML;
 }
 else {
   input.style.display = 'none';
+  login.style.display = 'block';
   alert('Please enter correct password or username')
 }
 }
