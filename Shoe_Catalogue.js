@@ -58,7 +58,7 @@ var size = document.querySelector('.DSize');
 var Mycolor = document.querySelector('.myColor');
 
 var TempInstance = Handlebars.compile(MyTemp.innerHTML);
-var myshoes=document.querySelector(".myshoes")
+var myshoes=document.querySelector(".myshoes");
 
 search.addEventListener('click',  function(){
   var colorChoosed = Mycolor.value;
@@ -71,9 +71,6 @@ search.addEventListener('click',  function(){
     var sizeMatches = (sh.size == sizeChoosed || sizeChoosed == 'all');
     if(colorMatches && sizeMatches){
       shoesL.push(sh);
-    }
-    else {
-      alert("Select Color and Size")
     }
     myshoes.innerHTML = TempInstance({shoes: shoesL})
   }
