@@ -20,7 +20,9 @@ input.style.display = 'block';
 else {
   input.style.display = 'none';
   login.style.display = 'block';
-  alert('Please enter correct password or username')
+  password.value = '';
+  username.value = '';
+  alert('Please enter correct password or username');
 }
 }
 btn.addEventListener('click', loginD);
