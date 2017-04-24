@@ -3,7 +3,7 @@ var shoes = [
             color : 'blue',
             price : 1000,
             in_stock : 11,
-            size: '8',
+            size: 8,
             image: 'blueB.jpg',
             Brand: 'Adidas'
         },
@@ -11,7 +11,7 @@ var shoes = [
             color : 'blue',
             price : 1950,
             in_stock : 11,
-            size: '8',
+            size: 8,
             image: 'blueA.jpg',
             Brand: 'Nike'
         },
@@ -19,7 +19,7 @@ var shoes = [
             color : 'blue',
             price : 1150,
             in_stock : 11,
-            size: '8',
+            size: 8,
             image: 'blueC.jpg',
             Brand: 'Puma'
         },
@@ -27,7 +27,7 @@ var shoes = [
             color : 'blue',
             price : 1150,
             in_stock : 11,
-            size: '7',
+            size: 7,
             image: 'puma.jpg',
             Brand: 'Puma'
         },
@@ -35,7 +35,7 @@ var shoes = [
             color : 'blue',
             price : 1050,
             in_stock : 11,
-            size: '4',
+            size: 4,
             image: 'adidas.jpg',
             Brand: 'Adidas'
         },
@@ -43,7 +43,7 @@ var shoes = [
             color : 'black',
             price : 950,
             in_stock : 11,
-            size: '6',
+            size: 6,
             image: 'sneaker3.jpg',
             Brand: 'Adidas'
         },
@@ -51,7 +51,7 @@ var shoes = [
             color : 'black',
             price : 980,
             in_stock : 11,
-            size: '8',
+            size: 8,
             image: 'aa2.jpg',
             Brand: 'Adidas'
         },
@@ -59,7 +59,7 @@ var shoes = [
             color : 'black',
             price : 980,
             in_stock : 11,
-            size: '4',
+            size: 4,
             image: 'dida.jpg',
             Brand: 'Adidas'
         },
@@ -67,48 +67,9 @@ var shoes = [
             color : 'black',
             price : 960,
             in_stock : 2,
-            size: '5',
+            size: 5,
             image: 'pumA.jpg',
             Brand: 'Puma'
         },
-        {
-            color : 'black',
-            price : 1050,
-            in_stock : 8,
-            size: '7',
-            image: 'Nike.jpg',
-            Brand: 'Nike'
-        },
-        {
-            color : 'red',
-            price : 1050,
-            in_stock : 4,
-            size: '6',
-            image: 'red1.jpg',
-            Brand: 'Nike'
-        },
-        {
-            color : 'red',
-            price : 1020,
-            in_stock : 8,
-            size: '8',
-            image: 'red2.jpg',
-            Brand: 'Adidas'
-        },
-        {
-            color : 'red',
-            price : 1050,
-            in_stock : 5,
-            size: '4',
-            image: 'sneaker.jpg',
-            Brand: 'Puma'
-        },
-        {
-            color : 'red',
-            price : 1050,
-            in_stock : 6,
-            size: '5',
-            image: 'snkr.jpg',
-            Brand: 'Puma'
-        },
+
 ];

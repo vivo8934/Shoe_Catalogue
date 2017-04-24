@@ -46,26 +46,30 @@
     <br>
     <br>
   <form class= "User">
-    <label>Color</label> : <select class= "myColor" size="1">
+    <label>Color</label> : <select class= "myColor">
+    <script class="TemplateDrop" type="text/handlebars-x">
    <option value="selector color" class="color" disabled selected>Select color</option>
-      <option value="all" class="color">all</option>
-      <option value="black" class="color">black</option>
-      <option value="blue" class="color">blue</option>
-      <option value="red" class="color">red</option>
-    </select>
-    <label>Size</label>  : <select class= "DSize" size="1">
-      <option value="selector size" class="size" disabled selected>Select size</option>
-      <option value="all" class="size">all</option>
-      <option value="4" class="size">4</option>
-      <option value="5" class="size">5</option>
-      <option value="6" class="size">6</option>
-      <option value="7" class="size">7</option>
-      <option value="8" class="size">8</option>
-    </select><br><br>
-    <button type="button" name="search" class ='myBtn'>Search</button>
+{{#each shoes}}
+    <option name="color">{{this}}</option>
+{{/each}}
+    </script>
+  </select>
 
-    <a href="home.html"><button type="button" name="back" class = 'Btn'>Back</button></a>
+    <label>Size</label>  : <select class= "DSize" size="1">
+      <script class="SizeDrop" type="text/handlebars-x">
+      <option value="selector size" class="size" disabled selected>Select size</option>
+{{#each shoes}}
+      <option name="size">{{this}}</option>
+      {{/each}}
+      </script>
+    </select><br><br>
   </form>
+  <button type="button" name="search" class ='myBtn'>Search</button>
+
+  <a href="home.html"><button type="button" name="back" class = 'Btn'>Back</button></a>
+
+  <button type="button" name="all" class="allbtn">ALL</button>
+
   <div class="myshoes">
 
   </div>
