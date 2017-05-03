@@ -1,48 +1,50 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Web page</title>
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
-<script src="Catalogue.json" class = 'data'></script>
-  </head>
-  <body>
-    <h1>Shoe Catalogue</h1>
+
+<head>
+  <meta charset="utf-8">
+  <title>Web page</title>
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+  <script src="Catalogue.json" class='data'></script>
+</head>
+
+<body>
+  <h1>Shoe Catalogue</h1>
   <div class='style'>
     <h2 class="animated infinite bounce"> HOME </h2>
   </div>
   <script class="Template" type="text/handlebars-x">
-<div id = "shopC">
-{{#each shoes}}
-<div id= "myStock">
-<div id= "details">
-<img src = {{image}}><br>
-<b>Color:</b>{{color}}<br>
-<b>Price:</b> R {{price}}.00<br>
-<b>stock:</b> {{in_stock}}<br>
-<b>Size:</b> {{size}}<br>
-<b>Brand:</b>{{Brand}}
-</div>
-</div>
-{{/each}}
-</div>
+    <div id="shopC">
+      {{#each shoes}}
+      <div id="myStock">
+        <div id="details">
+          <img src={ {image}}><br>
+          <b>Color:</b>{{color}}<br>
+          <b>Price:</b> R {{price}}.00<br>
+          <b>stock:</b> {{in_stock}}<br>
+          <b>Size:</b> {{size}}<br>
+          <b>Brand:</b>{{Brand}}
+        </div>
+      </div>
+      {{/each}}
+    </div>
   </script>
-<br>
-<br>
+  <br>
+  <br>
   <div class="container">
-    <form class= "User">
-      <label>Color</label> : <select class= "myColor">
+    <form class="User">
+      <label>Color</label> : <select class="myColor">
       <script class="TemplateDrop" type="text/handlebars-x">
      <option value="selector color" class="color" disabled selected>Select color</option>
   {{#each shoes}}
-      <option name="color">{{this}}</option>
+      <option name="color" >{{this}}</option>
   {{/each}}
       </script>
     </select>
 
-      <label>Size</label>  : <select class= "DSize" size="1">
+      <label>Size</label> : <select class="DSize" size="1">
         <script class="SizeDrop" type="text/handlebars-x">
         <option value="selector size" class="size" disabled selected>Select size</option>
   {{#each shoes}}
@@ -51,7 +53,7 @@
         </script>
       </select><br><br>
     </form>
-    <button type="button" name="search" class ='myBtn'>Search</button>
+    <button type="button" name="search" class='myBtn'>Search</button>
 
 
     <button type="button" name="all" class="allbtn">ALL</button>
@@ -59,72 +61,74 @@
     <div class="myshoes">
 
     </div>
-  <script src="Shoe_Catalogue.js" charset="utf-8"></script>
-  <script src="Admin.js" charset="utf-8"></script>
-  <br><br><br>
-<div class="Admin">
-  <h3>Admin Login</h3>
-
-  <form>
-    <div class="imgcontainer">
-      <img src="download.png" alt="Avatar" class="avatar">
-    </div>
-
-    <div class="container">
-
-      <div class="login">
-        <label><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" class="username" required>
-
-        <label><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" class='pass' required>
-
-        <button type="button" class="btn">Login</button>
-        <div class="container" style="background-color:#f1f1f1"></div>
-
-        <div class="inputs ">
-               <div class="field">
-                 <label>Brand:</label>  <input type="text" class="brandName">
-               </div>
-               <br>
-               <div class="field">
-                 <label>Size:</label>
-                 <input type="number" class="sizeName">
-               </div>
-               <br>
-               <div class="field">
-                 <label>Color:</label>
-                 <input type="text" class="ColorName">
-               </div>
-               <br>
-               <div class="field">
-                 <label>Stock:</label>
-                 <input type="number" class="stockName">
-               </div>
-               <br>
-               <div class="field">
-                 <label>Price:</label>
-                 <input type="number" class="PriceName">
-               </div>
-               <br>
-               <div class="field">
-                 <label>Image:</label>
-                 <input id="myFileInput" type="file" accept="image/*;">
-               </div>
-               <div class="Btns">
-                <input type="button" class="enter" value="enter">
-                  <a href="home.html"><input type="button" class="cancel" value="cancel"></input></a>
-       </div>
-             </div>
 
 
-           </div>
+    <br><br><br>
+    <div class="Admin">
+      <h3>Admin Login</h3>
+
+      <form>
+
+        <div class="container">
+
+          <div class="login">
+            <div class="imgcontainer">
+              <img src="download.png" alt="Avatar" class="avatar">
+            </div>
+            <label><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" class="username" required>
+
+            <label><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" class='pass' required>
+
+            <button type="button" class="btn">Login</button>
+            <div class="container" style="background-color:#f1f1f1"></div>
+          </div>
+          <div class="inputs">
+            <div class="field">
+              <label>Brand:</label> <input type="text" class="brandName">
+            </div>
+            <br>
+            <div class="field">
+              <label>Size:</label>
+              <input type="number" class="sizeName">
+            </div>
+            <br>
+            <div class="field">
+              <label>Color:</label>
+              <input type="text" class="ColorName">
+            </div>
+            <br>
+            <div class="field">
+              <label>Stock:</label>
+              <input type="number" class="stockName">
+            </div>
+            <br>
+            <div class="field">
+              <label>Price:</label>
+              <input type="number" class="PriceName">
+            </div>
+            <br>
+            <div class="field">
+              <label>Image:</label>
+              <input id="myFileInput" type="file" accept="image/*;">
+            </div>
+
+            <div class="Btns">
+              <input type="button" class="enter" value="enter">
+              <a href="home.html"><input type="button" class="cancel" value="cancel"></input>
+              </a>
+            </div>
 
 
-</div>
 
 
-  <footer>Developed by Mfundo ngqanekana codeX 2017</footer>
-<script src="home.js" charset="utf-8"></script>
-    </body>
+
+        </div>
+
+
+        <footer>Developed by Mfundo ngqanekana codeX 2017</footer>
+        <script src="home.js" charset="utf-8"></script>
+</body>
+
 </html>

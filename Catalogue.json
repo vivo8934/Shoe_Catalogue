@@ -4,7 +4,7 @@ var shoes = [
             price : 1000,
             in_stock : 11,
             size: 8,
-            image: 'blueB.jpg',
+            image: 'Nike.jpg',
             Brand: 'Adidas'
         },
         {

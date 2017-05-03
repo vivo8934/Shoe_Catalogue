@@ -13,7 +13,7 @@ var btn = document.querySelector('.btn');
 var input = document.querySelector('.inputs');
 var login = document.querySelector('.login');
 var enter = document.querySelector('.enter');
-
+var Size = document.querySelector('.size');
 
 var TempInstance = Handlebars.compile(MyTemp.innerHTML);
 
@@ -24,14 +24,14 @@ var SizeDropInstance = Handlebars.compile(tempDrop.innerHTML);
 
 var myshoes=document.querySelector(".myshoes");
 
-var colorA = uniqColor(shoes);
 var colorF = function(){
+  var colorA = uniqColor(shoes);
   Mycolor.innerHTML = tempDropInstance({shoes:colorA});
 }
 colorF();
 
-var SizeA = uniqSize(shoes);
 var SizeF = function(){
+  var SizeA = uniqSize(shoes);
 size.innerHTML = SizeDropInstance({shoes: SizeA});
 }
 SizeF();
@@ -64,23 +64,29 @@ for(var i=0; i<shoes.length; i++){
 }
 return size;
 };
-var saveShoe = [];
 
+function populateDropDown(){
+
+  var colors = uniqColor();
+  var sizes = uniqSize();
+
+  var results = tempDropInstance({shoes:colors});
+//Size.innerHTML = results;
+
+var result = SizeDropInstance({shoes:sizes})
+//myshoes.innerHTML = result;
+console.log(colors);
+console.log(sizes);
+ }
+
+populateDropDown();
 
 var myshoes=document.querySelector(".myshoes");
 
 allbtn.addEventListener('click',  function(){
 
-  var shoesL = [];
-  for (var i = 0; i < shoes.length; i++) {
-
-    var sh = shoes[i];
-
-    var colorM = sh.color
-    shoesL.push(sh);
-    myshoes.innerHTML = TempInstance({shoes: shoesL})
-  }
-
+  var searchResults = TempInstance({shoes: shoes})
+  myshoes.innerHTML = searchResults
 });
 var loginD = function() {
   var user = 'vivo8934';
@@ -100,4 +106,46 @@ var loginD = function() {
     alert('Please enter correct password or username');
   }
 }
+// add stock
+var stockMap = {};
+enter.addEventListener('click', function(){
+
+  var Brand = document.querySelector('.brandName');
+  var Size  = document.querySelector('.sizeName');
+  var Color = document.querySelector('.ColorName');
+  var Stock = document.querySelector('.stockName');
+  var Price = document.querySelector('.PriceName');
+  var Image = document.querySelector('#myFileInput');
+
+var brandName = Brand.value;
+
+if(!brandName == ''){
+  var names = stockMap[brandName];
+  if(names == undefined){
+    names ={
+      brand : Brand.value,
+      size : Size.value,
+      color : Color.value,
+      Stock : Stock.value,
+      price : Price.value,
+      image : Image.value
+    };
+    shoes.push(names);
+stockMap[brandName] = names;
+}
+else{
+  names.Stock += (Stock.value)
+}
+}
+
+var searchResults = TempInstance({shoes : shoes})
+myshoes.innerHTML = searchResults;
+
+//populateDropDown();
+colorF();
+SizeF();
+})
+
+
+
 btn.addEventListener('click', loginD);
