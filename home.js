@@ -81,13 +81,40 @@ console.log(sizes);
 
 populateDropDown();
 
-var myshoes=document.querySelector(".myshoes");
+//var myshoes=document.querySelector(".myshoes");
 
+// filtering stock
+search.addEventListener('click', function(){
+
+var DropColor = Mycolor.value;
+var DropSize = size.value;
+
+var EmptyShoe = [];
+
+for (var i = 0; i <shoes.length; i++) {
+
+     var sh = shoes[i];
+    var GetSize = (sh.size == DropSize);
+    var GetColor = (sh.color == DropColor);
+    console.log(GetSize, "size");
+    console.log(GetColor, "Colour");
+if(GetColor && GetSize){
+  // sh.image = shoes[i].image;
+  console.log(sh);
+  EmptyShoe.push(sh);
+}
+myshoes.innerHTML = TempInstance({shoes: EmptyShoe});
+}
+})
+
+// displaying all stock
 allbtn.addEventListener('click',  function(){
 
   var searchResults = TempInstance({shoes: shoes})
   myshoes.innerHTML = searchResults
 });
+
+// creating a function for login Menu
 var loginD = function() {
   var user = 'vivo8934';
   var pword = 'mfundo8934';
@@ -130,6 +157,15 @@ if(!brandName == ''){
       price : Price.value,
       image : Image.value
     };
+
+    // clearing all text-fields after adding
+    Brand.value = '';
+    Size.value = '';
+    Color.value = '';
+    Stock.value = '';
+    Price.value = '';
+    Image.value = '';
+
     shoes.push(names);
 stockMap[brandName] = names;
 }
@@ -145,7 +181,4 @@ myshoes.innerHTML = searchResults;
 colorF();
 SizeF();
 })
-
-
-
 btn.addEventListener('click', loginD);
