@@ -155,7 +155,7 @@ if(!brandName == ''){
       color : Color.value,
       Stock : Stock.value,
       price : Price.value,
-      image : Image.value
+      image : Image.value.substring(12)
     };
 
     // clearing all text-fields after adding
