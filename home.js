@@ -116,13 +116,13 @@ allbtn.addEventListener('click',  function(){
 
 // creating a function for login Menu
 var loginD = function() {
-  var user = 'vivo8934';
+  var user = 'vivo8934'.ignoreCase;
   var pword = 'mfundo8934';
 
   var aUser = username.value;
   var aPass = password.value;
 
-
+// checking the password and username
   if (aUser === user && aPass === pword) {
     login.style.display = 'none';
     input.style.display = 'block';
